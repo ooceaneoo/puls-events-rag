@@ -1,0 +1,11 @@
+langchain
+langchain-community
+langchain-mistralai
+faiss-cpu
+fastapi
+uvicorn
+pandas
+requests
+python-dotenv
+ragas
+pytest
