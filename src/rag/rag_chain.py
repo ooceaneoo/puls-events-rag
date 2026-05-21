@@ -185,7 +185,7 @@ Réponse :
 # QUESTION-RÉPONSE RAG
 # ============================================================
 
-def ask_question(question, k=4):
+def ask_question(question, k=3):
     """
     Exécution du pipeline RAG complet.
 

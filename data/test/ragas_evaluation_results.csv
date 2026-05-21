@@ -1,0 +1,153 @@
+user_input,retrieved_contexts,response,reference,faithfulness,context_precision,context_recall
+Quel est le meilleur restaurant italien à Montpellier ?,"[""Titre : Rencontre ton pro : Hôtellerie - Restauration. Description : Les échanges seront animés par Info Jeunes Occitanieavec le Campus des Métiers et des Qualifications de l'Hôtellerie et de la Restauration.Ainsi des professionnels/elles de l’hôtellerie de luxe et de. Lieu : Montpellier, 34000 Montpellier. Date de début : 2025-09-15T12:00:00+00:00. Date de fin : 2025-09-15T14:00:00+00:00. Mots-clés : ['1 jeune  1 solution', 'Découverte secteur / métier']."", ""'Réception', 'Ménage', 'Propreté', 'Petit-Déjeuner', 'Entretiens', 'CV', 'Montpellier', 'Hérault', 'Occitanie']."", ""'Restaurant', 'Bar à vins', 'Magasin bio', 'Vitinéraire']."", 'Titre : Vraiment ?. Description : La metteuse en scène et comédienne Gabrielle Gonzalez présente sa dernière pièce ""Vraiment ?"" le samedi 24 mai à 17h à la médiathèque Garcia Lorca de Montpellier.. Lieu : Montpellier, 162 avenue de Palavas 34070 Montpellier. Date de début : 2025-05-24T15:00:00+00:00. Date de fin : 2025-05-24T15:30:00+00:00. Mots-clés : [\'théâtre\', \'Montpellier\', \'masque\', \'rumeurs\', \'réseaux sociaux\', \'désinformation\'].']","L'information concernant les restaurants italiens à Montpellier n'est pas disponible dans le contexte fourni. Je ne peux donc pas répondre à votre question sur le meilleur restaurant italien à Montpellier.
+
+Si vous cherchez des événements culturels ou des activités à Montpellier, je peux vous aider à trouver des suggestions parmi ceux disponibles dans la base. Par exemple, voici quelques événements à venir :
+
+- **Rencontre ton pro : Hôtellerie - Restauration** (15 septembre 2025) : Une rencontre avec des professionnels de l'hôtellerie et de la restauration.
+- **La Fête du Vin Bio - Métropole de Montpellier** (23 mai au 6 juin 2026) : Un événement autour du vin bio avec des restaurants et bars à vins.
+- **Vraiment ?** (24 mai 2025) : Une pièce de théâtre à la médiathèque Garcia Lorca.
+
+Souhaitez-vous plus d'informations sur l'un de ces événements ?",Je ne peux pas recommander de restaurant car ma base contient uniquement des événements publics à Montpellier.,0.7,0.249999999975,1.0
+Peux-tu réserver une place pour un concert ?,"[""Titre : Concert à Montpellier : Debussy, Ravel, Bizet, Aznavour, Saint-Saëns, Dutilleux. Description : Concert Musicâme à Montpellier : Debussy, Aznavour et grands classiques français pour une expérience musicale immersive et émouvante. Réservez vite !. Lieu : Montpellier, 43 Rue de l'aiguillerie, 34000 Montpellier. Date de début : 2026-04-30T18:00:00+00:00. Date de fin : 2026-04-30T19:15:00+00:00. Mots-clés : ['musicâme france', 'violon', 'musique classique', 'concert Montpellier']."", ""'événement', 'montpellier', 'concert', 'concert de musique classique', 'concert à montpellier', 'musicame france', 'ensemble musicame france', 'orchestre', 'virtuose', 'flute', 'violon', 'violoncelle', 'spectacle', 'musique', 'sortir à montpellier', 'agenda', 'jazz', 'concert jazz']."", 'Titre : Une Touche d\'Optimisme/Sortie d\'Album Gratuite. Description : ""Release Party"" Gratuite au ROCKSTORE. Lieu : Montpellier, 20 Rue de Verdun Montpellier. Date de début : 2026-05-21T17:30:00+00:00. Date de fin : 2026-05-21T20:30:00+00:00. Mots-clés : [\'Musique\', \'Concert\', \'Fête\', \'Soirée\', \'Chanson\', \'Chanson Française\', \'Gratuit\'].', ""Titre : Concert par l'ensemble instrumental universitaire de Montpellier. Description : Concert de l'Ensemble Instrumental Universitaire de Montpellier. Lieu : Montpellier, 1bis Rue du Jardin de la Reine, 34000 Montpellier, France. Date de début : 2025-09-21T16:30:00+00:00. Date de fin : 2025-09-21T18:30:00+00:00. Mots-clés : None.""]","Je ne peux pas réserver de place pour un concert, car je n'ai pas accès aux outils de réservation ou aux plateformes nécessaires pour le faire.
+
+Cependant, voici les événements disponibles à Montpellier que vous pourriez réserver vous-même :
+
+1. **Concert à Montpellier : Debussy, Ravel, Bizet, Aznavour, Saint-Saëns, Dutilleux**
+   - **Date** : 30 avril 2026, 18h00 - 19h15
+   - **Lieu** : 43 Rue de l'Aiguillerie, 34000 Montpellier
+
+2. **Concert Musicâme à Montpellier : Vivaldi x Bach x Piazzolla**
+   - **Date** : 4 décembre 2025, 19h00 - 20h15
+   - **Lieu** : 43 Rue de l'Aiguillerie, 34000 Montpellier
+
+3. **Une Touche d'Optimisme / Sortie d'Album Gratuite**
+   - **Date** : 21 mai 2026, 17h30 - 20h30
+   - **Lieu** : 20 Rue de Verdun, 34000 Montpellier
+
+4. **Concert par l'ensemble instrumental universitaire de Montpellier**
+   - **Date** : 21 septembre 2025, 16h30 - 18h30
+   - **Lieu** : 1bis Rue du Jardin de la Reine, 34000 Montpellier
+
+Pour réserver, vous pouvez consulter les sites des salles ou des organisateurs (comme **Musicâme France**, **Rockstore**, ou l'**Université de Montpellier**). Si vous avez besoin d'aide pour trouver les liens de réservation, je peux vous orienter vers une recherche en ligne. 😊",Je ne peux pas effectuer de réservation. Je peux seulement recommander des événements présents dans la base.,0.5555555555555556,0.499999999975,0.0
+Quelle est la météo prévue ce week-end à Montpellier ?,"['Titre : Atelier - La Fresque du Climat. Description : Venez découvrir La Fresque du Climat, un atelier ludique et collaboratif, pendant La Grande Semaine Végétale !. Lieu : Montpellier, 77 Rue du Faubourg Figuerolles, Montpellier, France. Date de début : 2025-09-29T18:00:00+00:00. Date de fin : 2025-09-29T21:00:00+00:00. Mots-clés : None.', ""Titre : Action découverte des métiers: Métiers de la prévention au travail du Conseil Départemental à Montpellier. Description : Venez découvrir le métier passionnant de la prévention au travail au sein du Conseil Départemental ! Cette 1/2 journée est l'occasion parfaite pour échanger avec des professionnels engagés et déco.... Lieu : Montpellier, 34080 Montpellier. Date de début : 2025-09-16T12:00:00+00:00. Date de fin : 2025-09-16T14:00:00+00:00. Mots-clés : ['Portes ouvertes',"", 'Titre : Visites pédagogiques. Description : Venez découvrir le plus ancien Jardin botanique de France à travers les différentes visites proposées tout au long du week-end.. Lieu : Montpellier, 12 Bd Henri IV, 34000 Montpellier, France. Date de début : 2025-06-06T11:30:00+00:00. Date de fin : 2025-06-08T15:00:00+00:00. Mots-clés : None.', ""Titre : 12° Vinyl Pop-Up Market de Montpellier. Description : 𝗗𝗶𝗺𝗮𝗻𝗰𝗵𝗲 29 Mars, 𝗱𝗲 𝟭𝟬𝗵 𝗮̀ 𝟭𝟴𝗵, 𝗹𝗮 𝗛𝗮𝗹𝗹𝗲 𝗧𝗿𝗼𝗽𝗶𝘀𝗺𝗲 accueille le 12° Vinyl Pop-Up Market de Montpellier.. Lieu : Montpellier, 121 rue fontcouverte. Date de début : 2026-03-29T08:00:00+00:00. Date de fin : 2026-03-29T16:00:00+00:00. Mots-clés : ['cd', 'vinyles', 'dvd', 'livres', '33T', '45T', 'bourse', 'salon', 'foire', 'Montpellier'].""]",L'information concernant la météo prévue ce week-end à Montpellier n'est pas disponible dans le contexte fourni.,Je ne peux pas fournir la météo car les données météorologiques ne sont pas présentes dans la base.,1.0,0.0,1.0
+Quels concerts sont prévus à Paris ?,"['Titre : Concert de gospel. Description : 🎤 Concert de gospel – Clôture des Journées européennes du patrimoine. Lieu : Montpellier, Place Albert 1er, 34000 Montpellier. Date de début : 2025-09-21T16:00:00+00:00. Date de fin : 2025-09-21T17:00:00+00:00. Mots-clés : None.', ""Titre : Concert Musicâme à Montpellier : Vivaldi x Bach x Piazzolla. Description : Avec plus de 100 villes parcourues en Europe, Musicâme réunit virtuoses internationaux et talents locaux pour des concerts uniques, une musique sans frontières qui touche le cœur et élève l’esprit.. Lieu : Montpellier, 43 Rue de l'aiguillerie. Date de début : 2025-12-04T19:00:00+00:00. Date de fin : 2025-12-04T20:15:00+00:00. Mots-clés : ['musique classique', 'classique', 'événement', 'montpellier', 'concert',"", 'Titre : Concert voix et orgue. Description : Concert ""Ode à Notre-Dame"". Lieu : Montpellier, 11 rue des Etuves 34000 Montpellier. Date de début : 2025-09-21T16:00:00+00:00. Date de fin : 2025-09-21T17:00:00+00:00. Mots-clés : None.', ""Titre : Une Touche d'Optimisme 20 Ans. Description : Concert Anniversaire au ROCKSTORE. Lieu : Montpellier, 20 Rue de Verdun Montpellier. Date de début : 2025-10-11T17:30:00+00:00. Date de fin : 2025-10-11T21:00:00+00:00. Mots-clés : ['Musique', 'Concert', 'Fête', 'Soirée', 'Chanson', 'Chanson Française'].""]","D'après les informations disponibles, aucun concert n'est prévu à **Paris** dans la base de données.
+
+En revanche, voici une sélection de **concerts à Montpellier** qui pourraient vous intéresser :
+
+1. **Concert de gospel**
+   - **Date** : 21 septembre 2025, 16h-17h
+   - **Lieu** : Place Albert 1er, 34000 Montpellier
+   - *Clôture des Journées européennes du patrimoine.*
+
+2. **Concert voix et orgue – ""Ode à Notre-Dame""**
+   - **Date** : 21 septembre 2025, 16h-17h
+   - **Lieu** : 11 rue des Etuves, 34000 Montpellier
+
+3. **Concert Musicâme : Vivaldi x Bach x Piazzolla**
+   - **Date** : 4 décembre 2025, 19h-20h15
+   - **Lieu** : 43 Rue de l'aiguillerie, Montpellier
+   - *Musique classique internationale.*
+
+4. **Une Touche d'Optimisme 20 Ans** (Concert Anniversaire)
+   - **Date** : 11 octobre 2025, 17h30-21h
+   - **Lieu** : 20 Rue de Verdun, Montpellier
+   - *Chansons françaises au ROCKSTORE.*
+
+Souhaitez-vous des informations sur un type de concert en particulier ?",Je ne peux pas répondre pour Paris car la base d'événements indexée concerne Montpellier uniquement.,0.8461538461538461,0.8055555555287036,1.0
+Y a-t-il des expositions à Montpellier ?,"[""Titre : Exposition : « Dessiner l'Architecture #1 ». Description : Aquarelles, relevés, croquis d’étude, esquisses, perspectives, dessins techniques, rendus de concours.... Lieu : Montpellier, 1 rue voltaire 34000 Montpellier. Date de début : 2025-09-18T16:00:00+00:00. Date de fin : 2025-09-18T18:00:00+00:00. Mots-clés : ['architecture', 'croquis', 'dessin', 'illustrateur', 'dessinateur', 'concours', 'Montpellier', 'patrimoine', 'Opéra']."", 'Titre : Exposition ""Montpellier, regarder la ville autrement. Archives et architecture"". Description : À travers l\'exemple de cinq monuments emblématiques de Montpellier, cette présentation de documents issus des fonds conservés aux Archives de Montpellier montrera comment l\'architecture a changé de …. Lieu : Montpellier, 218 boulevard de l\'Aéroport, 34064 Montpellier. Date de début : 2025-09-20T08:00:00+00:00. Date de fin : 2025-09-20T16:00:00+00:00. Mots-clés : None.', ""Titre : Exposition « Terre de Bâtisseuses ». Description : Pour ce début d'été, la MAOM vous invite à venir explorer « Terre de Bâtisseuses », une exposition signée Alizée Cugney et Claire Dycha, co-gérantes de l’association éponyme.. Lieu : Montpellier, 19 rue Saint Louis 34000 Montpellier. Date de début : 2025-06-27T08:00:00+00:00. Date de fin : 2025-07-24T16:00:00+00:00. Mots-clés : ['exposition', 'architecture', 'terre crue', 'construction', 'portrait']."", 'Titre : Exposition : « Pierre Soulages, la Rencontre ». Description : Pierre Soulages. Lieu : Montpellier, 39 Boulevard de Bonnes Nouvelles, 34000 Montpellier, France. Date de début : 2025-09-20T09:00:00+00:00. Date de fin : 2025-09-21T16:00:00+00:00. Mots-clés : None.']","Voici les expositions disponibles à Montpellier selon les informations disponibles :
+
+1. **« Dessiner l'Architecture #1 »**
+   - **Dates** : 18 septembre 2025 (16h - 18h)
+   - **Lieu** : 1 rue Voltaire, 34000 Montpellier
+   - **Description** : Aquarelles, croquis, dessins techniques et perspectives sur l'architecture et le patrimoine.
+
+2. **« Montpellier, regarder la ville autrement. Archives et architecture »**
+   - **Dates** : 20 septembre 2025 (8h - 16h)
+   - **Lieu** : 218 boulevard de l'Aéroport, 34064 Montpellier
+   - **Description** : Découverte de l'évolution architecturale de Montpellier à travers des archives.
+
+3. **« Terre de Bâtisseuses »**
+   - **Dates** : Du 27 juin au 24 juillet 2025 (8h - 16h)
+   - **Lieu** : 19 rue Saint Louis, 34000 Montpellier
+   - **Description** : Exposition sur les femmes dans la construction et l'architecture en terre crue.
+
+4. **« Pierre Soulages, la Rencontre »**
+   - **Dates** : 20 et 21 septembre 2025 (9h - 16h)
+   - **Lieu** : 39 Boulevard de Bonnes Nouvelles, 34000 Montpellier
+   - **Description** : Hommage à l'artiste Pierre Soulages.
+
+Si vous souhaitez des informations plus précises sur l'une d'elles, n'hésitez pas à demander !","Je peux proposer des expositions à Montpellier si elles sont présentes dans les événements indexés, en indiquant leurs titres, dates et lieux.",0.9444444444444444,0.499999999975,0.0
+Quels concerts sont prévus prochainement ?,"['Titre : Concert de gospel. Description : 🎤 Concert de gospel – Clôture des Journées européennes du patrimoine. Lieu : Montpellier, Place Albert 1er, 34000 Montpellier. Date de début : 2025-09-21T16:00:00+00:00. Date de fin : 2025-09-21T17:00:00+00:00. Mots-clés : None.', ""Titre : Concert Musicâme à Montpellier : Vivaldi x Bach x Piazzolla. Description : Avec plus de 100 villes parcourues en Europe, Musicâme réunit virtuoses internationaux et talents locaux pour des concerts uniques, une musique sans frontières qui touche le cœur et élève l’esprit.. Lieu : Montpellier, 43 Rue de l'aiguillerie. Date de début : 2025-12-04T19:00:00+00:00. Date de fin : 2025-12-04T20:15:00+00:00. Mots-clés : ['musique classique', 'classique', 'événement', 'montpellier', 'concert',"", ""'événement', 'montpellier', 'concert', 'concert de musique classique', 'concert à montpellier', 'musicame france', 'ensemble musicame france', 'orchestre', 'virtuose', 'flute', 'violon', 'violoncelle', 'spectacle', 'musique', 'sortir à montpellier', 'agenda', 'jazz', 'concert jazz']."", ""Titre : Une Touche d'Optimisme 20 Ans. Description : Concert Anniversaire au ROCKSTORE. Lieu : Montpellier, 20 Rue de Verdun Montpellier. Date de début : 2025-10-11T17:30:00+00:00. Date de fin : 2025-10-11T21:00:00+00:00. Mots-clés : ['Musique', 'Concert', 'Fête', 'Soirée', 'Chanson', 'Chanson Française'].""]","Voici les concerts prévus prochainement à Montpellier :
+
+1. **Concert de gospel**
+   - **Date** : 21 septembre 2025
+   - **Heure** : 16h00 - 17h00
+   - **Lieu** : Place Albert 1er, 34000 Montpellier
+   - **Description** : Clôture des Journées européennes du patrimoine avec un concert de gospel.
+
+2. **Une Touche d'Optimisme 20 Ans**
+   - **Date** : 11 octobre 2025
+   - **Heure** : 17h30 - 21h00
+   - **Lieu** : 20 Rue de Verdun, Montpellier
+   - **Description** : Concert anniversaire au ROCKSTORE avec des chansons françaises.
+
+3. **Concert Musicâme à Montpellier : Vivaldi x Bach x Piazzolla**
+   - **Date** : 4 décembre 2025
+   - **Heure** : 19h00 - 20h15
+   - **Lieu** : 43 Rue de l'aiguillerie, Montpellier
+   - **Description** : Concert de musique classique avec des virtuoses internationaux.","Je peux proposer les concerts présents dans les événements indexés, avec les informations disponibles sur les dates et les lieux.",1.0,0.0,0.0
+Quels événements gratuits sont disponibles ?,"['Date de fin : 2025-09-11T09:30:00+00:00. Mots-clés : [\'Conférence\', \'#TousMobilisés\', \'Les outils du numérique\', \'Marché du travail\', ""S\'informer"", ""Création d\'entreprise"", \'Tout public\', \'à distance\'].', 'Date de fin : 2025-09-25T09:30:00+00:00. Mots-clés : [\'Conférence\', \'#TousMobilisés\', ""S\'informer"", \'Marché du travail\', \'Les outils du numérique\', \'Tout public\', \'à distance\'].', ""Titre : 100% des perdants ont tenté leur chance. Description : Après-midi immersif autour d'ateliers ludiques et interactifs pour décortiquer les techniques de manipulations des plate-formes de pari sportif.. Lieu : Montpellier, montpellier. Date de début : 2026-03-25T13:00:00+00:00. Date de fin : 2026-03-25T17:00:00+00:00. Mots-clés : None."", 'de fin : 2025-09-11T09:30:00+00:00. Mots-clés : [\'#TousMobilisés\', ""Création d\'entreprise"", ""S\'informer"", \'Les outils du numérique\', \'Marché du travail\'].']","Voici les événements gratuits disponibles à Montpellier selon les informations fournies :
+
+1. **Atelier Numérique GOOGLE : Comment lancer mon business en ligne ? (Niveau 1)**
+   - **Date** : 11 septembre 2025
+   - **Horaire** : 08h00 - 09h30
+   - **Lieu** : À distance
+   - **Thèmes** : Création d'entreprise, outils du numérique, marché du travail
+   - **Public** : Tout public
+
+2. **Atelier Numérique GOOGLE : Quelles sont les clés d'une recherche d'emploi organisée ?**
+   - **Date** : 25 septembre 2025
+   - **Horaire** : 08h00 - 09h30
+   - **Lieu** : À distance
+   - **Thèmes** : Recherche d'emploi, réseaux sociaux, outils du numérique
+   - **Public** : Tout public
+
+3. **100% des perdants ont tenté leur chance**
+   - **Date** : 25 mars 2026
+   - **Horaire** : 13h00 - 17h00
+   - **Lieu** : Montpellier (adresse précise non indiquée)
+   - **Description** : Ateliers ludiques et interactifs sur les techniques de manipulation des plateformes de pari sportif.
+
+*Note* : Les deux ateliers Google sont gratuits et accessibles en ligne. Le troisième événement semble également gratuit, mais son contenu et son public cible ne sont pas clairement définis.",Je peux proposer des événements gratuits uniquement si l'information tarifaire est disponible dans les données indexées.,0.5909090909090909,0.0,0.0
+Quels événements sont organisés au musée Fabre ?,"['Titre : Visite commentée : « Un musée, des bâtiments, une histoire ». Description : 🏛️ Découverte architecturale du musée Fabre. Lieu : Montpellier, 39 Boulevard de Bonnes Nouvelles, 34000 Montpellier, France. Date de début : 2025-09-20T12:30:00+00:00. Date de fin : 2025-09-21T15:00:00+00:00. Mots-clés : None.', 'Titre : Visite commentée : « Façades et architectures ». Description : 🏛 Le musée Fabre à travers ses façades. Lieu : Montpellier, 39 Boulevard de Bonnes Nouvelles, 34000 Montpellier, France. Date de début : 2025-09-20T13:00:00+00:00. Date de fin : 2025-09-21T15:45:00+00:00. Mots-clés : None.', ""Titre : Les grands donateurs. Description : Les amis du musée Fabre vous propose une visite afin de découvrir quelques grands donateurs du musée. François-Xavier Fabre, Antoine Valedau et Alfred Bruyas seront à l'honneur.. Lieu : Montpellier, 39 Boulevard de Bonnes Nouvelles, 34000 Montpellier, France. Date de début : 2026-05-23T18:00:00+00:00. Date de fin : 2026-05-23T19:30:00+00:00. Mots-clés : None."", 'Titre : Regards croisés sur la peinture de François-Xavier Fabre. Description : Visite à deux voix par Eliane et Edouard Aujaleu, amis du musée Fabre. Lieu : Montpellier, 39 Boulevard de Bonnes Nouvelles, 34000 Montpellier, France. Date de début : 2025-05-17T19:00:00+00:00. Date de fin : 2025-05-17T20:00:00+00:00. Mots-clés : None.']","Voici les événements organisés au **musée Fabre** à Montpellier :
+
+### **Visites commentées et découvertes architecturales**
+1. **« Un musée, des bâtiments, une histoire »**
+   - **Dates** : 20 et 21 septembre 2025
+   - **Horaires** : 12h30 - 15h00
+   - **Description** : Découverte architecturale du musée Fabre.
+
+2. **« Façades et architectures »**
+   - **Dates** : 20 et 21 septembre 2025
+   - **Horaires** : 13h00 - 15h45
+   - **Description** : Visite axée sur les façades et l’architecture du musée.
+
+---
+
+### **Visites thématiques**
+3. **« Les grands donateurs »**
+   - **Date** : 23 mai 2026
+   - **Horaires** : 18h00 - 19h30
+   - **Description** : Découverte des grands donateurs du musée (François-Xavier Fabre, Antoine Valedau, Alfred Bruyas).
+
+4. **« Regards croisés sur la peinture de François-Xavier Fabre »**
+   - **Date** : 17 mai 2025
+   - **Horaires** : 19h00 - 20h00
+   - **Description** : Visite à deux voix par des amis du musée Fabre.
+
+---
+**Lieu pour tous les événements** :
+📍 **Musée Fabre**
+39 Boulevard de Bonnes Nouvelles, 34000 Montpellier, France
+
+Si vous souhaitez des informations supplémentaires ou des recommandations, n'hésitez pas !",Je peux rechercher les événements associés au musée Fabre si ce lieu est présent dans les données indexées.,1.0,0.0,0.0

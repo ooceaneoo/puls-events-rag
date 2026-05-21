@@ -1,0 +1,9 @@
+question,expected_answer
+"Quel est le meilleur restaurant italien à Montpellier ?","Je ne peux pas recommander de restaurant car ma base contient uniquement des événements publics à Montpellier."
+"Peux-tu réserver une place pour un concert ?","Je ne peux pas effectuer de réservation. Je peux seulement recommander des événements présents dans la base."
+"Quelle est la météo prévue ce week-end à Montpellier ?","Je ne peux pas fournir la météo car les données météorologiques ne sont pas présentes dans la base."
+"Quels concerts sont prévus à Paris ?","Je ne peux pas répondre pour Paris car la base d'événements indexée concerne Montpellier uniquement."
+"Y a-t-il des expositions à Montpellier ?","Je peux proposer des expositions à Montpellier si elles sont présentes dans les événements indexés, en indiquant leurs titres, dates et lieux."
+"Quels concerts sont prévus prochainement ?","Je peux proposer les concerts présents dans les événements indexés, avec les informations disponibles sur les dates et les lieux."
+"Quels événements gratuits sont disponibles ?","Je peux proposer des événements gratuits uniquement si l'information tarifaire est disponible dans les données indexées."
+"Quels événements sont organisés au musée Fabre ?","Je peux rechercher les événements associés au musée Fabre si ce lieu est présent dans les données indexées."
