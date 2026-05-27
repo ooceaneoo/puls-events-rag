@@ -9,7 +9,6 @@ __pycache__/
 # Tests
 .pytest_cache/
 
-# Données (optionnel selon ton choix)
 # data/
 
 # IDE
