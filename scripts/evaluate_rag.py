@@ -13,10 +13,7 @@ from ragas.metrics import faithfulness, context_precision, context_recall
 from ragas.run_config import RunConfig
 
 
-# ============================================================
-# CONFIGURATION DES CHEMINS
-# ============================================================
-
+# Configuration des chemins
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(PROJECT_ROOT))
 
@@ -29,17 +26,11 @@ OUTPUT_PATH = PROJECT_ROOT / "data" / "test" / "ragas_evaluation_results.csv"
 RETRIEVAL_K = 3
 
 
-# ============================================================
-# CHARGEMENT DE L'ENVIRONNEMENT
-# ============================================================
-
+# Chargement des variables d'environnement
 load_dotenv()
 
 
-# ============================================================
-# MODÈLES MISTRAL UTILISÉS PAR RAGAS
-# ============================================================
-
+# Modèles utilisés pour l'évaluation Ragas
 def get_ragas_llm():
     """
     Initialise le modèle Mistral utilisé par Ragas pour évaluer
@@ -56,7 +47,6 @@ def get_ragas_llm():
         api_key=api_key,
         temperature=0
     )
-
 
 def get_ragas_embeddings():
     """
@@ -77,18 +67,15 @@ def get_ragas_embeddings():
     )
 
 
-# ============================================================
-# RÉCUPÉRATION DES CONTEXTES FAISS
-# ============================================================
-
+# Récupération des contextes FAISS
 def retrieve_contexts(question, k=RETRIEVAL_K):
     """
     Récupère les documents les plus pertinents dans FAISS.
 
     Ces contextes sont fournis à Ragas pour évaluer :
-    - la fidélité de la réponse au contexte ;
-    - la précision du contexte ;
-    - le rappel du contexte.
+    - la fidélité de la réponse au contexte
+    - la précision du contexte
+    - le rappel du contexte
     """
 
     vectorstore = load_vectorstore()
@@ -97,19 +84,16 @@ def retrieve_contexts(question, k=RETRIEVAL_K):
     return [doc.page_content for doc in documents]
 
 
-# ============================================================
-# CONSTRUCTION DU DATASET RAGAS
-# ============================================================
-
+# Construction du dataset Ragas
 def build_ragas_dataset():
     """
     Construit le dataset attendu par Ragas.
 
     Colonnes utilisées :
-    - question : question utilisateur ;
-    - answer : réponse générée par le pipeline RAG ;
-    - contexts : documents récupérés dans FAISS ;
-    - ground_truth : réponse attendue annotée.
+    - question : question utilisateur
+    - answer : réponse générée par le pipeline RAG
+    - contexts : documents récupérés dans FAISS
+    - ground_truth : réponse attendue annotée
     """
 
     if not INPUT_PATH.exists():
@@ -151,18 +135,15 @@ def build_ragas_dataset():
     return Dataset.from_list(rows)
 
 
-# ============================================================
-# ÉVALUATION AUTOMATIQUE AVEC RAGAS
-# ============================================================
-
+# Évaluation automatique avec Ragas
 def evaluate_rag_with_ragas():
     """
     Lance l'évaluation automatique du système RAG avec Ragas.
 
     Métriques retenues :
-    - faithfulness : vérifie si la réponse reste fidèle au contexte ;
-    - context_precision : vérifie si les contextes récupérés sont pertinents ;
-    - context_recall : vérifie si les contextes couvrent les informations attendues.
+    - faithfulness : vérifie si la réponse reste fidèle au contexte
+    - context_precision : vérifie si les contextes récupérés sont pertinents
+    - context_recall : vérifie si les contextes couvrent les informations attendues
 
     Les métriques utilisées ici sont les métriques historiques de Ragas,
     compatibles avec LangChain et le modèle Mistral utilisé dans le projet.
@@ -208,9 +189,6 @@ def evaluate_rag_with_ragas():
     print(result)
 
 
-# ============================================================
-# POINT D'ENTRÉE DU SCRIPT
-# ============================================================
-
+# Exécution du script
 if __name__ == "__main__":
     evaluate_rag_with_ragas()

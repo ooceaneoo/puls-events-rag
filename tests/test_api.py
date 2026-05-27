@@ -3,18 +3,12 @@ from fastapi.testclient import TestClient
 from api.main import app
 
 
-# ============================================================
-# INITIALISATION DU CLIENT DE TEST FASTAPI
-# ============================================================
-
+# Initialisation du client de test FastAPI
 # Simule des requêtes HTTP sans démarrer réellement le serveur Uvicorn
 client = TestClient(app)
 
 
-# ============================================================
-# TEST DE L'ENDPOINT /health
-# ============================================================
-
+# Test de l'endpoint /health
 def test_health_check_returns_ok():
     """
     Vérifie que l'API répond correctement sur /health.
@@ -26,10 +20,7 @@ def test_health_check_returns_ok():
     assert response.json()["status"] == "ok"
 
 
-# ============================================================
-# TEST DE L'ENDPOINT /ask
-# ============================================================
-
+# Test de l'endpoint /ask
 def test_ask_returns_rag_response():
     """
     Vérifie que l'endpoint /ask retourne :
@@ -56,10 +47,7 @@ def test_ask_returns_rag_response():
     assert isinstance(data["sources"], list)
 
 
-# ============================================================
-# TEST DES QUESTIONS VIDES
-# ============================================================
-
+# Test des questions vides
 def test_ask_rejects_empty_question():
     """
     Vérifie que l'API refuse les questions vides.
@@ -75,10 +63,7 @@ def test_ask_rejects_empty_question():
     assert response.json()["detail"] == "La question ne peut pas être vide."
 
 
-# ============================================================
-# TEST DE SÉCURISATION DE /rebuild
-# ============================================================
-
+# Test de sécurisation de /rebuild
 def test_rebuild_rejects_missing_api_key():
     """
     Vérifie que l'endpoint /rebuild refuse les requêtes sans clé API.

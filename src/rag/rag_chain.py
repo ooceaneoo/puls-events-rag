@@ -8,28 +8,18 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 
-# ============================================================
-# CONFIGURATION DES CHEMINS
-# ============================================================
-
+# Configuration des chemins
+INDEX_PATH = Path("data/vectorstore/faiss_events_montpellier")
 # Dossier contenant les fichiers FAISS générés à l'étape précédente :
 # - index.faiss : vecteurs
 # - index.pkl : documents et métadonnées
-INDEX_PATH = Path("data/vectorstore/faiss_events_montpellier")
 
 
-# ============================================================
-# CHARGEMENT DES VARIABLES D'ENVIRONNEMENT
-# ============================================================
-
-# Chargement du fichier .env afin de récupérer la clé API Mistral.
+# Chargement des variables d'environnement (fichier .env afin de récupérer la clé API Mistral)
 load_dotenv()
 
 
-# ============================================================
-# CHARGEMENT DU MODÈLE D'EMBEDDINGS
-# ============================================================
-
+# Chargement du modèle d'embeddings
 def get_embeddings_model():
     """
     Initialisation du modèle d'embeddings Mistral.
@@ -41,7 +31,7 @@ def get_embeddings_model():
 
     api_key = os.getenv("MISTRAL_API_KEY")
 
-    # Sécurité : arrêt explicite si la clé API est absente.
+    # Sécurité : arrêt explicite si la clé API est absente
     if not api_key:
         raise ValueError("La variable MISTRAL_API_KEY est absente du fichier .env.")
 
@@ -51,10 +41,7 @@ def get_embeddings_model():
     )
 
 
-# ============================================================
-# CHARGEMENT DU MODÈLE DE GÉNÉRATION
-# ============================================================
-
+# Chargement du modèle de génération
 def get_llm():
     """
     Initialisation du LLM Mistral.
@@ -76,10 +63,7 @@ def get_llm():
     )
 
 
-# ============================================================
-# CHARGEMENT DE L'INDEX FAISS
-# ============================================================
-
+# Chargement de l'index FAISS
 def load_vectorstore(index_path=INDEX_PATH):
     """
     Chargement de la base vectorielle FAISS sauvegardée localement.
@@ -104,10 +88,7 @@ def load_vectorstore(index_path=INDEX_PATH):
     return vectorstore
 
 
-# ============================================================
-# FORMATAGE DU CONTEXTE
-# ============================================================
-
+# Formatage du contexte
 def format_documents(documents):
     """
     Préparation des documents FAISS avant envoi au LLM.
@@ -121,7 +102,7 @@ def format_documents(documents):
     for doc in documents:
         metadata = doc.metadata
 
-        # Création d'un bloc texte clair pour chaque événement retrouvé.
+        # Création d'un bloc texte clair pour chaque événement retrouvé
         formatted_doc = (
             f"Titre : {metadata.get('title', 'Non renseigné')}\n"
             f"Ville : {metadata.get('city', 'Non renseignée')}\n"
@@ -133,14 +114,11 @@ def format_documents(documents):
 
         formatted_docs.append(formatted_doc)
 
-    # Séparation explicite des événements pour améliorer la lisibilité du contexte.
+    # Séparation explicite des événements pour améliorer la lisibilité du contexte
     return "\n\n---\n\n".join(formatted_docs)
 
 
-# ============================================================
-# PROMPT DU SYSTÈME RAG
-# ============================================================
-
+# Prompt du système RAG
 def get_prompt():
     """
     Création du prompt utilisé par la chaîne RAG.
@@ -181,10 +159,7 @@ Réponse :
     ])
 
 
-# ============================================================
-# QUESTION-RÉPONSE RAG
-# ============================================================
-
+# Pipeline principal du système RAG (Question-Réponse)
 def ask_question(question, k=3):
     """
     Exécution du pipeline RAG complet.
@@ -200,7 +175,7 @@ def ask_question(question, k=3):
     vectorstore = load_vectorstore()
 
     # Création du retriever LangChain
-    # k correspond au nombre de chunks retournés par FAISS
+    # k = nombre de chunks retournés par FAISS
     retriever = vectorstore.as_retriever(search_kwargs={"k": k})
 
     # Recherche des événements/chunks les plus proches de la question
@@ -222,7 +197,7 @@ def ask_question(question, k=3):
 
     sources = []
 
-    # Conservation des sources pour transparence et API
+    # Conservation des sources utilisées pour la réponse
     for doc in documents:
         sources.append({
             "title": doc.metadata.get("title"),
@@ -239,10 +214,7 @@ def ask_question(question, k=3):
     }
 
 
-# ============================================================
-# POINT D'ENTRÉE DU SCRIPT
-# ============================================================
-
+# Exécution du script
 if __name__ == "__main__":
 
     # Question de démonstration pour valider le fonctionnement du RAG en local

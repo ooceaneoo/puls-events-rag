@@ -14,11 +14,7 @@ from src.vectorstore.build_faiss_index import (
 # Chargement des variables d'environnement
 load_dotenv()
 
-# ============================================================
-# INITIALISATION DE L'API FASTAPI
-# ============================================================
-
-# Configurations (titre, descriptions, version)
+# Initialisation de l'API FastAPI
 app = FastAPI(
     title="Puls-Events RAG API",
     description=(
@@ -29,10 +25,7 @@ app = FastAPI(
 )
 
 
-# ============================================================
-# SCHÉMAS DE REQUÊTE ET DE RÉPONSE
-# ============================================================
-
+# Schémas de requête et de réponse
 class AskRequest(BaseModel):
     """
     Requête reçue par l'endpoint /ask. Corps attendu pour interroger le système RAG.
@@ -77,10 +70,7 @@ class RebuildResponse(BaseModel):
     chunks_count: int
 
 
-# ============================================================
-# ENDPOINT DE VÉRIFICATION DE L'API
-# ============================================================
-
+# Endpoint de vérification de l'API
 @app.get("/health")
 def health_check():
     """
@@ -93,10 +83,7 @@ def health_check():
     }
 
 
-# ============================================================
-# ENDPOINT D'INTERROGATION DU RAG
-# ============================================================
-
+# Endpoint d'interrogation du RAG
 @app.post("/ask", response_model=AskResponse)
 def ask(request: AskRequest):
     """
@@ -150,10 +137,7 @@ def ask(request: AskRequest):
         )
 
 
-# ============================================================
-# ENDPOINT DE RECONSTRUCTION DE L'INDEX VECTORIEL
-# ============================================================
-
+# Endpoint de reconstruction de l'index vectoriel
 @app.post("/rebuild", response_model=RebuildResponse)
 def rebuild_index(x_api_key: str = Header(...)):
     """

@@ -4,10 +4,7 @@ from pathlib import Path
 import pandas as pd
 
 
-# ============================================================
-# CONFIGURATION DES CHEMINS
-# ============================================================
-
+# Configuration des chemins
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(PROJECT_ROOT))
 
@@ -18,10 +15,7 @@ INPUT_PATH = PROJECT_ROOT / "data" / "test" / "manual_questions.csv"
 OUTPUT_PATH = PROJECT_ROOT / "data" / "test" / "manual_review_results.csv"
 
 
-# ============================================================
-# GÉNÉRATION DES RÉPONSES POUR REVUE MANUELLE
-# ============================================================
-
+# Génération des réponses pour revue manuelle
 def generate_manual_review():
     """
     Génère les réponses du système RAG pour toutes les questions du jeu de test manuel.
@@ -75,9 +69,6 @@ def generate_manual_review():
     print(f"Résultats sauvegardés dans : {OUTPUT_PATH}")
 
 
-# ============================================================
-# POINT D'ENTRÉE
-# ============================================================
-
+# Exécution du script
 if __name__ == "__main__":
     generate_manual_review()

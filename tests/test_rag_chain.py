@@ -5,10 +5,7 @@ from src.rag.rag_chain import (
 )
 
 
-# ============================================================
-# TEST DU CHARGEMENT DE L'INDEX FAISS
-# ============================================================
-
+# Test du chargement de l'index FAISS
 def test_load_vectorstore_returns_faiss_instance():
     """
     Vérifie que l'index vectoriel FAISS sauvegardé localement peut être correctement rechargé.
@@ -23,10 +20,7 @@ def test_load_vectorstore_returns_faiss_instance():
     assert vectorstore is not None
 
 
-# ============================================================
-# TEST DU FORMATAGE DES DOCUMENTS
-# ============================================================
-
+# Test du formatage des documents
 def test_format_documents_returns_string():
     """
     Vérifie que les documents récupérés depuis FAISS
@@ -58,10 +52,7 @@ def test_format_documents_returns_string():
     assert len(formatted) > 0
 
 
-# ============================================================
-# TEST DU PIPELINE RAG COMPLET
-# ============================================================
-
+# Test du pipeline RAG complet
 def test_ask_question_returns_response():
     """
     Vérifie le bon fonctionnement du pipeline RAG complet.

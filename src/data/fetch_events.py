@@ -5,62 +5,36 @@ from datetime import date, timedelta
 from pathlib import Path
 
 
-# ============================================================
-# CONFIGURATION DE L'API OPENAGENDA (OpenDataSoft)
-# ============================================================
-
+# Configuration de l'API OpenAgenda
 BASE_URL = "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/evenements-publics-openagenda/records"
 
 
-# ============================================================
-# NETTOYAGE DES DONNÉES TEXTUELLES
-# ============================================================
-
+# Nettoyage des données textuelles
 def clean_text(text):
     """
-    Nettoyage des champs textuels issus de l'API.
-
-    Objectifs :
+    Nettoyage des champs textuels récupérés depuis l'API :
     - suppression des balises HTML
     - normalisation des espaces
     - suppression des retours à la ligne
-
-    Paramètre :
-        text (str) : texte brut issu de l'API
-
-    Retour :
-        str : texte nettoyé
     """
 
     if not text:
         return ""
 
-    text = re.sub(r"<.*?>", "", str(text))  # suppression HTML
+    text = re.sub(r"<.*?>", "", str(text))
     text = text.replace("\n", " ").replace("\r", " ")
     text = re.sub(r"\s+", " ", text)
 
     return text.strip()
 
 
-# ============================================================
-# EXTRACTION DES DONNÉES DEPUIS L'API
-# ============================================================
-
+# Extraction des données depuis l'API
 def fetch_events(city="Montpellier", limit=100):
     """
-    Extraction des événements OpenAgenda via API REST.
-
-    Fonctionnalités :
+    Extraction des événements OpenAgenda via API REST :
     - filtrage par ville
     - filtrage temporel (événements sur les 12 derniers mois + à venir)
     - gestion de la pagination pour récupérer l'intégralité des données
-
-    Paramètres :
-        city (str) : ville ciblée
-        limit (int) : nombre de résultats par appel API
-
-    Retour :
-        list : liste brute des événements
     """
 
     today = date.today()
@@ -98,10 +72,7 @@ def fetch_events(city="Montpellier", limit=100):
     return all_events
 
 
-# ============================================================
-# TRANSFORMATION ET STRUCTURATION DES DONNÉES
-# ============================================================
-
+# Préparation du dataset pour le système RAG
 def clean_events(events):
     """
     Transformation des données brutes en dataset structuré.
@@ -113,13 +84,7 @@ def clean_events(events):
     - dates
     - mots-clés
 
-    Construction d'un champ textuel dédié aux embeddings (indexation future).
-
-    Paramètre :
-        events (list) : données brutes issues de l'API
-
-    Retour :
-        pandas.DataFrame : dataset nettoyé
+    Construction d'un champ textuel dédié aux embeddings.
     """
 
     cleaned = []
@@ -140,6 +105,7 @@ def clean_events(events):
         if not title or not description:
             continue
 
+        # Texte utilisé pour créer les embeddings
         text_for_embedding = (
             f"Titre : {title}. "
             f"Description : {description}. "
@@ -163,22 +129,11 @@ def clean_events(events):
     return pd.DataFrame(cleaned)
 
 
-# ============================================================
-# SAUVEGARDE DU DATASET
-# ============================================================
-
+# Sauvegarde du dataset
 def save_events(df, output_path="data/processed/events_montpellier.csv"):
     """
     Sauvegarde du dataset structuré au format CSV.
-
     Création automatique du dossier cible si nécessaire.
-
-    Paramètres :
-        df (DataFrame) : données nettoyées
-        output_path (str) : chemin de sauvegarde
-
-    Retour :
-        Path : chemin du fichier généré
     """
 
     output_path = Path(output_path)
@@ -189,10 +144,7 @@ def save_events(df, output_path="data/processed/events_montpellier.csv"):
     return output_path
 
 
-# ============================================================
-# POINT D'ENTRÉE DU SCRIPT
-# ============================================================
-
+# Exécution du script
 if __name__ == "__main__":
 
     CITY = "Montpellier"
@@ -205,7 +157,7 @@ if __name__ == "__main__":
     df = clean_events(events)
     print(f"{len(df)} événements exploitables après nettoyage")
 
-    # Sauvegarde
+    # Sauvegarde du dataset final
     path = save_events(df)
 
     print(f"Dataset sauvegardé dans : {path}")

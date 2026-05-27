@@ -9,10 +9,7 @@ from src.vectorstore.build_faiss_index import (
 )
 
 
-# ============================================================
-# TEST DU CHARGEMENT DU DATASET
-# ============================================================
-
+# Test du chargement du dataset
 def test_load_events_dataset_returns_dataframe():
     """
     Vérifie que le dataset nettoyé est correctement chargé.
@@ -30,10 +27,7 @@ def test_load_events_dataset_returns_dataframe():
     assert "text_for_embedding" in df.columns
 
 
-# ============================================================
-# TEST DE CRÉATION DES DOCUMENTS LANGCHAIN
-# ============================================================
-
+# Test de création des documents LangChain
 def test_create_documents_returns_langchain_documents():
     """
     Vérifie que les lignes du DataFrame sont correctement transformées en documents LangChain.
@@ -73,10 +67,7 @@ def test_create_documents_returns_langchain_documents():
     assert documents[0].metadata["title"] == "Concert test"
 
 
-# ============================================================
-# TEST DU DÉCOUPAGE EN CHUNKS
-# ============================================================
-
+# Test du découpage en chunks
 def test_split_documents_returns_chunks():
     """
     Vérifie que les documents longs sont correctement découpés en plusieurs chunks.

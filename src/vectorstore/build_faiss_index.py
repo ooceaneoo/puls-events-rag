@@ -9,34 +9,19 @@ from langchain_mistralai import MistralAIEmbeddings
 from langchain_community.vectorstores import FAISS
 
 
-# ============================================================
-# CONFIGURATION DES CHEMINS
-# ============================================================
-
+# Configuration des chemins
 DATA_PATH = Path("data/processed/events_montpellier.csv")
 INDEX_PATH = Path("data/vectorstore/faiss_events_montpellier")
 
 
-# ============================================================
-# CHARGEMENT DES VARIABLES D'ENVIRONNEMENT
-# ============================================================
-
+# Chargement des variables d'environnement
 load_dotenv()
 
 
-# ============================================================
-# CHARGEMENT DU DATASET NETTOYÉ
-# ============================================================
-
+# Chargement du dataset nettoyé
 def load_events_dataset(data_path=DATA_PATH):
     """
     Chargement du fichier CSV généré lors de l'étape de pré-processing.
-
-    Paramètre :
-        data_path (Path) : chemin du fichier CSV nettoyé
-
-    Retour :
-        pandas.DataFrame : dataset des événements
     """
 
     if not data_path.exists():
@@ -52,10 +37,7 @@ def load_events_dataset(data_path=DATA_PATH):
     return df
 
 
-# ============================================================
-# CRÉATION DES DOCUMENTS LANGCHAIN
-# ============================================================
-
+# Création des documents LangChain
 def create_documents(df):
     """
     Conversion des lignes du dataset en documents LangChain.
@@ -88,10 +70,7 @@ def create_documents(df):
     return documents
 
 
-# ============================================================
-# DÉCOUPAGE DES TEXTES EN CHUNKS
-# ============================================================
-
+# Découpage des textes en chunks
 def split_documents(documents, chunk_size=500, chunk_overlap=50):
     """
     Découpage des documents en chunks avant vectorisation.
@@ -110,16 +89,12 @@ def split_documents(documents, chunk_size=500, chunk_overlap=50):
     return chunks
 
 
-# ============================================================
-# CONSTRUCTION DE L'INDEX FAISS
-# ============================================================
-
+# Construction de l'index FAISS
 def build_faiss_index(chunks, index_path=INDEX_PATH):
     """
     Vectorisation des chunks avec Mistral puis indexation dans FAISS.
 
-    Résultat :
-        création d'un index vectoriel local réutilisable.
+    L'index est sauvegardé localement pour être réutilisé par la chaîne RAG.
     """
 
     api_key = os.getenv("MISTRAL_API_KEY")
@@ -143,18 +118,10 @@ def build_faiss_index(chunks, index_path=INDEX_PATH):
     return vectorstore
 
 
-# ============================================================
-# TEST DE RECHERCHE SÉMANTIQUE
-# ============================================================
-
+# Vérification rapide de la recherche sémantique
 def test_similarity_search(vectorstore, query="Quels événements culturels sont disponibles à Montpellier ?", k=3):
     """
     Test rapide de recherche dans l'index FAISS.
-
-    Paramètres :
-        vectorstore : index FAISS chargé en mémoire
-        query (str) : question de test
-        k (int) : nombre de résultats retournés
     """
 
     results = vectorstore.similarity_search(query, k=k)
@@ -169,10 +136,7 @@ def test_similarity_search(vectorstore, query="Quels événements culturels sont
         print(f"Extrait : {doc.page_content[:300]}...")
 
 
-# ============================================================
-# POINT D'ENTRÉE DU SCRIPT
-# ============================================================
-
+# Exécution du script
 if __name__ == "__main__":
 
     df = load_events_dataset()
