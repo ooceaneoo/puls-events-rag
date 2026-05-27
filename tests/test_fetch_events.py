@@ -3,10 +3,7 @@ import pandas as pd
 from src.data.fetch_events import clean_text, clean_events, fetch_events
 
 
-# ============================================================
-# TEST DU NETTOYAGE DES TEXTES
-# ============================================================
-
+# Vérifie le nettoyage du HTML et des espaces inutiles
 def test_clean_text_removes_html_and_extra_spaces():
     text = "<p>Concert   à Montpellier</p>\nAvec artistes locaux."
 
@@ -15,20 +12,14 @@ def test_clean_text_removes_html_and_extra_spaces():
     assert cleaned == "Concert à Montpellier Avec artistes locaux."
 
 
-# ============================================================
-# TEST DE L'EXTRACTION API
-# ============================================================
-
+# Vérification du format des données récupérées depuis l'API
 def test_fetch_events_returns_list():
     events = fetch_events(city="Montpellier", limit=5)
 
     assert isinstance(events, list)
 
 
-# ============================================================
-# TEST DE LA STRUCTURE DU DATASET FINAL
-# ============================================================
-
+# Vérifie la structure du DataFrame après transformation
 def test_clean_events_returns_dataframe_with_expected_columns():
     fake_events = [
         {
@@ -60,10 +51,7 @@ def test_clean_events_returns_dataframe_with_expected_columns():
     assert len(df) == 1
 
 
-# ============================================================
-# TEST DES DONNÉES MANQUANTES
-# ============================================================
-
+# Vérifie la suppression des événements incomplets
 def test_clean_events_removes_events_without_title_or_description():
     fake_events = [
         {
@@ -83,10 +71,7 @@ def test_clean_events_removes_events_without_title_or_description():
     assert len(df) == 0
 
 
-# ============================================================
-# TEST DU TEXTE PRÊT POUR INDEXATION FUTURE
-# ============================================================
-
+# Vérification du texte utilisé pour les embeddings
 def test_text_for_embedding_is_created():
     fake_events = [
         {
