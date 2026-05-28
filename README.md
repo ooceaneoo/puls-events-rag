@@ -38,7 +38,7 @@ Le projet permet de :
 - LangChain
 - FAISS
 - Mistral AI
-- HuggingFace Embeddings
+- Mistral AI Embeddings (mistral-embed)
 
 ## Data
 - Pandas
