@@ -1,6 +1,6 @@
 # Puls Events RAG
 
-## Contexte du projet
+# Contexte du projet
 
 Ce projet a été réalisé dans le cadre d’un projet de système RAG (Retrieval-Augmented Generation).
 
@@ -122,7 +122,7 @@ pip install -r requirements.txt
 
 ---
 
-# Variables d’environnement
+## Variables d’environnement
 
 Créer un fichier `.env` à la racine du projet :
 
@@ -307,7 +307,7 @@ puls-events-rag/
 
 ---
 
-## Résultats observés
+# Résultats observés
 
 Le système RAG développé permet de générer des réponses contextualisées à partir des événements culturels récupérés via l’API OpenAgenda.
 
@@ -318,7 +318,7 @@ L’évaluation du système a été réalisée en deux étapes :
 
 Un jeu de questions a été créé afin de tester la pertinence des réponses produites par le pipeline RAG.
 
-### Revue manuelle
+## Revue manuelle
 
 Les réponses générées ont été analysées manuellement afin de vérifier :
 
@@ -333,7 +333,7 @@ Les résultats de cette revue ont été sauvegardés dans :
 data/test/manual_review_results.csv
 ```
 
-### Évaluation automatique avec Ragas
+## Évaluation automatique avec Ragas
 
 Les métriques suivantes ont été utilisées :
 
@@ -343,7 +343,7 @@ Les métriques suivantes ont été utilisées :
 | Context Precision | 0.2569             |
 | Context Recall    | 0.3750             |
 
-### Interprétation des résultats
+## Interprétation des résultats
 
 * Le score élevé de **faithfulness** montre que les réponses générées restent globalement cohérentes avec les informations réellement présentes dans les documents récupérés.
 * Le score de **context recall** indique que le système parvient à retrouver une partie importante des informations utiles pour répondre aux questions utilisateur.
@@ -357,7 +357,7 @@ Le choix de `k=3` a finalement été retenu car il offre un meilleur compromis e
 * fidélité des réponses générées
 * limitation du bruit dans le contexte envoyé au modèle
 
-### Validation globale du système
+## Validation globale du système
 
 Les différents tests réalisés montrent :
 
@@ -371,7 +371,7 @@ Le système reste toutefois sensible à la qualité des données OpenAgenda et p
 
 ---
 
-## Perspectives d’amélioration
+# Perspectives d’amélioration
 
 Plusieurs améliorations pourraient être ajoutées :
 - déploiement cloud
