@@ -307,7 +307,71 @@ puls-events-rag/
 
 ---
 
-# Perspectives d’amélioration
+## Résultats observés
+
+Le système RAG développé permet de générer des réponses contextualisées à partir des événements culturels récupérés via l’API OpenAgenda.
+
+L’évaluation du système a été réalisée en deux étapes :
+
+* une revue manuelle des réponses générées ;
+* une évaluation automatique avec la bibliothèque Ragas.
+
+Un jeu de questions a été créé afin de tester la pertinence des réponses produites par le pipeline RAG.
+
+### Revue manuelle
+
+Les réponses générées ont été analysées manuellement afin de vérifier :
+
+* la cohérence des réponses
+* la pertinence des événements proposés
+* la fidélité des informations retournées
+* la présence éventuelle d’hallucinations
+
+Les résultats de cette revue ont été sauvegardés dans :
+
+```bash
+data/test/manual_review_results.csv
+```
+
+### Évaluation automatique avec Ragas
+
+Les métriques suivantes ont été utilisées :
+
+| Métrique          | Score obtenu (k=3) |
+| ----------------- | ------------------ |
+| Faithfulness      | 0.8296             |
+| Context Precision | 0.2569             |
+| Context Recall    | 0.3750             |
+
+### Interprétation des résultats
+
+* Le score élevé de **faithfulness** montre que les réponses générées restent globalement cohérentes avec les informations réellement présentes dans les documents récupérés.
+* Le score de **context recall** indique que le système parvient à retrouver une partie importante des informations utiles pour répondre aux questions utilisateur.
+* Le score plus faible de **context precision** montre que certains documents récupérés par FAISS ne sont pas toujours totalement pertinents par rapport à la question posée.
+
+Plusieurs valeurs du paramètre `k` ont été testées lors de la recherche vectorielle (`k=3`, `k=4`, etc.).
+
+Le choix de `k=3` a finalement été retenu car il offre un meilleur compromis entre :
+
+* pertinence des documents récupérés
+* fidélité des réponses générées
+* limitation du bruit dans le contexte envoyé au modèle
+
+### Validation globale du système
+
+Les différents tests réalisés montrent :
+
+* un bon fonctionnement global du pipeline RAG
+* une API REST stable et exploitable
+* une reconstruction correcte de l’index FAISS
+* une intégration fonctionnelle avec Docker
+* une automatisation des tests via GitHub Actions
+
+Le système reste toutefois sensible à la qualité des données OpenAgenda et peut encore produire certaines réponses imprécises.
+
+---
+
+## Perspectives d’amélioration
 
 Plusieurs améliorations pourraient être ajoutées :
 - déploiement cloud
