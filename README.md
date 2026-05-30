@@ -278,31 +278,53 @@ Fichier :
 ```text
 puls-events-rag/
 │
-├── api/
-│   └── main.py
+├── api
+│   └── main.py                           # API FastAPI et endpoints du système RAG
 │
-├── data/
-│   ├── processed/
-│   └── test/
+├── data
+│   ├── processed
+│   │   └── events_montpellier.csv        # Dataset nettoyé des événements OpenAgenda
+│   │
+│   ├── test
+│   │   ├── manual_questions.csv          # Questions utilisées pour la revue manuelle
+│   │   ├── manual_review_results.csv     # Réponses générées et annotations manuelles
+│   │   ├── ragas_evaluation_results.csv  # Résultats de l’évaluation automatique Ragas
+│   │   └── ragas_questions.csv           # Questions/réponses de référence pour Ragas
+│   │
+│   └── vectorstore
+│       └── faiss_events_montpellier
+│           ├── index.faiss               # Vecteurs FAISS générés à partir des embeddings
+│           └── index.pkl                 # Documents et métadonnées associés à l’index
 │
-├── scripts/
-│   ├── evaluate_rag.py
-│   └── generate_manual_review.py
+├── scripts
+│   ├── evaluate_rag.py                   # Évaluation automatique avec Ragas
+│   └── generate_manual_review.py         # Génération des réponses pour revue manuelle
 │
-├── src/
-│   ├── rag/
-│   └── vectorstore/
+├── src
+│   ├── data
+│   │   └── fetch_events.py               # Récupération et nettoyage des données OpenAgenda
+│   │
+│   ├── rag
+│   │   └── rag_chain.py                  # Pipeline RAG et génération des réponses
+│   │
+│   └── vectorstore
+│       └── build_faiss_index.py          # Création des embeddings et index FAISS
 │
-├── tests/
-│   ├── test_api.py
-│   ├── test_fetch_events.py
-│   ├── test_rag_chain.py
-│   └── test_vectorstore.py
+├── tests
+│   ├── test_api.py                       # Tests des endpoints FastAPI
+│   ├── test_fetch_events.py              # Tests de préparation des données
+│   ├── test_rag_chain.py                 # Tests du pipeline RAG
+│   └── test_vectorstore.py               # Tests de l’index vectoriel
 │
-├── Dockerfile
-├── .dockerignore
-├── requirements.txt
-└── README.md
+├── .github
+│   └── workflows
+│       └── tests.yml                     # Automatisation des tests GitHub Actions
+│
+├── Dockerfile                            # Conteneurisation de l’application
+├── .dockerignore                         
+├── .gitignore                            
+├── requirements.txt                      
+└── README.md                             
 ```
 
 ---
